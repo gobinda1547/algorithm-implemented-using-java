@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class Program0 {
 
+	private static int totalCounter;
+
 	public static int N;
 	public static int[] A = new int[100];
 
@@ -20,6 +22,7 @@ public class Program0 {
 
 	public static void solve(int i) {
 		if (i == N) {
+			totalCounter++;
 			print();
 			return;
 		}
@@ -34,7 +37,9 @@ public class Program0 {
 		Scanner scanner = new Scanner(System.in);
 		// N = scanner.nextInt();
 		N = 3;
+		totalCounter = 0;
 		solve(0);
+		System.out.println("totalCounter = " + totalCounter);
 		scanner.close();
 	}
 

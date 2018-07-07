@@ -8,14 +8,13 @@ import java.util.Random;
  */
 public class Main {
 
-	public static int[] a;
 
 	public static void main(String[] args) {
 
-		a = getRandomInputs();
+		int[] a = getRandomInputs();
 		printArray(a, "input array is: ");
 		int searchValue = 25;
-		int ans = binarySearch(searchValue);
+		int ans = binarySearch(a,searchValue);
 
 		if (ans == -1) {
 			System.out.println(searchValue + " not found");
@@ -25,7 +24,7 @@ public class Main {
 
 	}
 
-	public static int binarySearch(int searchValue) {
+	public static int binarySearch(int[] a, int searchValue) {
 
 		int first = 0;
 		int last = a.length - 1;
